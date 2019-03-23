@@ -1,0 +1,33 @@
+package com.rayanc.atry;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+public void click(View view)
+{
+   EditText cgp= (EditText) findViewById(R.id.text1);
+
+   Double perd=Double.parseDouble(cgp.getText().toString());
+
+   Double per=perd*(9.5);
+
+   EditText text= (EditText) findViewById(R.id.text2);
+   text.setText(per.toString());
+
+}
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+   }
+}
+
+
+
